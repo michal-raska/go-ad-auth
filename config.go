@@ -19,10 +19,11 @@ const (
 
 //Config contains settings for connecting to an Active Directory server.
 type Config struct {
-	Server   string
-	Port     int
-	BaseDN   string
-	Security SecurityType
+	Server             string
+	Port               int
+	BaseDN             string
+	Security           SecurityType
+	InsecureSkipVerify bool
 }
 
 //Domain returns the domain derived from BaseDN or an error if misconfigured.
